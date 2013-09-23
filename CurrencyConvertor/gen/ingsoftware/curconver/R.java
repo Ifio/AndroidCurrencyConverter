@@ -8,6 +8,9 @@
 package ingsoftware.curconver;
 
 public final class R {
+    public static final class array {
+        public static final int currenciesArray=0x7f060000;
+    }
     public static final class attr {
     }
     public static final class dimen {
@@ -24,23 +27,23 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f080009;
-        public static final int bttConvert=0x7f080008;
-        public static final int bttFrom=0x7f080006;
-        public static final int bttTo=0x7f080007;
-        public static final int editText1=0x7f080003;
-        public static final int editText2=0x7f080005;
-        public static final int etSearch=0x7f080000;
-        public static final int listview=0x7f080001;
-        public static final int tvFrom=0x7f080002;
-        public static final int tvTo=0x7f080004;
+        public static final int action_settings=0x7f090009;
+        public static final int bttConvert=0x7f090008;
+        public static final int bttFrom=0x7f090006;
+        public static final int bttTo=0x7f090007;
+        public static final int editText1=0x7f090003;
+        public static final int editText2=0x7f090005;
+        public static final int etSearch=0x7f090000;
+        public static final int listview=0x7f090001;
+        public static final int tvFrom=0x7f090002;
+        public static final int tvTo=0x7f090004;
     }
     public static final class layout {
         public static final int activity_list=0x7f030000;
         public static final int activity_main=0x7f030001;
     }
     public static final class menu {
-        public static final int main_page=0x7f070000;
+        public static final int main_page=0x7f080000;
     }
     public static final class string {
         public static final int action_settings=0x7f050001;
@@ -75,10 +78,10 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f060000;
+        public static final int AppBaseTheme=0x7f070000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f060001;
+        public static final int AppTheme=0x7f070001;
     }
 }
