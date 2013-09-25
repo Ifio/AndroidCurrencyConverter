@@ -8,86 +8,80 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".Main" >
 
-    <TextView
-        android:id="@+id/tvFrom"
+    <EditText
+        android:id="@+id/editText1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/editText1"
-        android:layout_alignLeft="@+id/editText1"
-        android:layout_marginBottom="40dp"
-        android:text="@string/titleFrom" />
+        android:layout_alignBottom="@+id/bttFrom"
+        android:layout_alignLeft="@+id/bttConvert"
+        android:layout_alignRight="@+id/bttConvert"
+        android:ems="10"
+        android:fontFamily="true"
+        android:inputType="number" />
 
-    <TextView
-        android:id="@+id/tvTo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/editText2"
-        android:layout_alignLeft="@+id/editText2"
-        android:layout_marginBottom="14dp"
-        android:text="@string/titleTo" />
+    <requestFocus />
 
     <Button
         android:id="@+id/bttFrom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/editText1"
-        android:layout_alignParentLeft="true"
-        android:layout_alignTop="@+id/editText1"
-        android:layout_toLeftOf="@+id/editText1"
+        android:layout_alignLeft="@+id/tvFrom"
+        android:layout_below="@+id/tvFrom"
+        android:layout_marginTop="14dp"
         android:onClick="currencyFrom"
-        android:text="@string/bttDefaultFrom"
-        android:textSize="15sp" />
+        android:text="@string/bttDefaultFrom" />
 
     <Button
         android:id="@+id/bttTo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/bttConvert"
-        android:layout_alignLeft="@+id/bttFrom"
-        android:layout_below="@+id/tvTo"
-        android:layout_toLeftOf="@+id/editText2"
+        android:layout_alignBaseline="@+id/bttConvert"
+        android:layout_alignBottom="@+id/bttConvert"
+        android:layout_alignRight="@+id/bttFrom"
         android:onClick="currencyTo"
-        android:text="@string/bttDefaultTo"
-        android:textSize="15sp" />
+        android:text="@string/bttDefaultTo" />
 
-    <EditText
-        android:id="@+id/editText1"
+    <Button
+        android:id="@+id/bttConvert"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/tvTo"
-        android:layout_alignLeft="@+id/tvTo"
-        android:layout_marginBottom="37dp"
-        android:ems="10"
-        android:focusable="true"
-        android:inputType="numberDecimal" />
+        android:layout_alignRight="@+id/editText2"
+        android:layout_below="@+id/tvTo"
+        android:layout_marginLeft="42dp"
+        android:layout_marginTop="17dp"
+        android:layout_toRightOf="@+id/bttTo"
+        android:onClick="convert"
+        android:text="@string/bttConvert" />
+
+    <TextView
+        android:id="@+id/tvFrom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="42dp"
+        android:text="@string/titleFrom"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tvTo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bttFrom"
+        android:layout_marginTop="22dp"
+        android:layout_toLeftOf="@+id/editText2"
+        android:text="@string/titleTo"
+        android:textSize="18sp" />
 
     <EditText
         android:id="@+id/editText2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
+        android:layout_below="@+id/bttTo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="23dp"
         android:ems="10"
-        android:enabled="false"
-        android:inputType="numberDecimal" >
-
-        <requestFocus />
+        android:inputType="none"
+        android:visibility="invisible" >
     </EditText>
-
-    <Button
-        android:id="@+id/bttConvert"
-        android:layout_width="220sp"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/bttTo"
-        android:layout_alignRight="@+id/editText2"
-        android:layout_below="@+id/editText2"
-        android:layout_marginTop="38dp"
-        android:onClick="convert"
-        android:text="@string/bttConvert" />
-
-    <!--
-        android:background="#000000" 
-        android:textColor="#FFFFFF"
-    -->
 
 </RelativeLayout>

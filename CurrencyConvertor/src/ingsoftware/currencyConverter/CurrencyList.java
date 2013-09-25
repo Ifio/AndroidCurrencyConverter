@@ -38,8 +38,6 @@ public class CurrencyList extends Activity {
 		Resources res = getResources();
 		final String[] values = res.getStringArray(R.array.currenciesArray);
 
-		
-
 		final ArrayList<String> list = new ArrayList<String>();
 		for (int i = 0; i < values.length; ++i) {
 			list.add(values[i]);

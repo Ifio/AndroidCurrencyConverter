@@ -86,6 +86,7 @@ public class Main extends Activity {
 		// Check if text is not empty
 		if (txtFrom.getText().toString() != ""
 				&& txtFrom.getText().length() != 0) {
+			txtTo.setVisibility(View.VISIBLE);
 			AsyncCallWS task = new AsyncCallWS();
 			task.execute();
 		} else {
