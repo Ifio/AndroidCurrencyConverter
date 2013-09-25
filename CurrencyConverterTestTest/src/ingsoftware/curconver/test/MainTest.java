@@ -1,14 +1,15 @@
 package ingsoftware.curconver.test;
 
 import android.app.Activity;
+//import android.app.Instrumentation;
 import android.test.ActivityInstrumentationTestCase2;
 import android.test.TouchUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+//import ingsoftware.currencyConverter.CurrencyList;
 import ingsoftware.currencyConverter.Main;
 import ingsoftware.curconver.R;
-
 
 public class MainTest extends ActivityInstrumentationTestCase2<Main> {
 
@@ -94,16 +95,78 @@ public class MainTest extends ActivityInstrumentationTestCase2<Main> {
 	public void testBtnConvert() {
 		TouchUtils.clickView(this, btnConvert);
 		String txtF = txtTo.getText().toString();
-		assert(!txtF.equals(null));
+		assert (!txtF.equals(null));
 	}
 
 	public void testBtnFrom() {
-		TouchUtils.clickView(this, btnFrom);
-		
+		//TouchUtils.clickView(this, btnFrom);
+
 	}
 
 	public void testBtnTo() {
-		//TouchUtils.clickView(this, btnTo);
+		/*
+		// TouchUtils.clickView(this, btnTo);
+
+		activity = getActivity();
+		assertNotNull(activity);
+
+		// Check initial value in TextView:
+		TextView text = (TextView) activity.findViewById(R.id.tvTo);
+		assertEquals(text.getText(), "default vaule");
+
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
+		// Create an ActivityMonitor that monitor ChildActivity, do not
+		// interrupt, do not return mock result:
+		Instrumentation.ActivityMonitor activityMonitor = getInstrumentation()
+				.addMonitor(CurrencyList.class.getName(), null, false);
+
+		// Simulate a button click in MainActivity that start ChildActivity for
+		// result:
+		final Button button = (Button) activity.findViewById(R.id.bttFrom);
+		activity.runOnUiThread(new Runnable() {
+			public void run() {
+				button.performClick();
+			}
+		});
+
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
+		getInstrumentation().waitForIdleSync();
+		CurrencyList childActivity = (CurrencyList) getInstrumentation()
+				.waitForMonitorWithTimeout(activityMonitor, 5);
+		// ChildActivity is created and gain focus on screen:
+		assertNotNull(childActivity);
+
+		// Simulate a button click in ChildActivity that set result and finish
+		// ChildActivity:
+		final Button button2 = (Button) childActivity
+				.findViewById(R.id.bttFrom);
+		childActivity.runOnUiThread(new Runnable() {
+			public void run() {
+				button2.performClick();
+			}
+		});
+
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
+		getInstrumentation().waitForIdleSync();
+		// TextView in MainActivity should be changed:
+		assertEquals(text.getText(), "default value changed");
+		*/
 	}
+
 	// ---------------------------
 }

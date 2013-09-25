@@ -3,14 +3,14 @@ package ingsoftware.curconver.test;
 import ingsoftware.currencyConverter.CurrencyList;
 import android.app.Activity;
 import android.test.ActivityInstrumentationTestCase2;
-import android.widget.ListView;
+import android.widget.EditText;
 import ingsoftware.curconver.R;
 
 public class CurrencyListTest extends
 		ActivityInstrumentationTestCase2<CurrencyList> {
 
 	Activity act;
-	ListView lv;
+	EditText et;
 
 	public CurrencyListTest() {
 		super(CurrencyList.class);
@@ -22,7 +22,12 @@ public class CurrencyListTest extends
 
 		// Components initialization
 		act = getActivity();
-		lv = (ListView) act.findViewById(R.id.listview);
+		et = (EditText) act.findViewById(R.id.etSearch);
+	}
+
+	public void testStringSearch() {
+		final String txtF = act.getString(R.string.find_hint);
+		assertEquals(txtF, et.getText().toString());
 	}
 
 }

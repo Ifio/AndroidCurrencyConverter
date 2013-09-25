@@ -10,7 +10,8 @@
     <string name="bttDefaultFrom">USD</string>
     <string name="bttDefaultTo">COP</string>
     <string name="find_hint">Search…</string>
-    <string-array name="currenciesArray">                                         
+    <string-array name="currenciesArray">
+        <!-- Currency Items -->                                         
 		<item>ALL - Albanian Lek</item>
 		<item>DZD - Algerian Dinar</item>
 		<item>ARS - Argentine Peso</item>
